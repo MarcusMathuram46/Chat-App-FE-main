@@ -11,7 +11,7 @@ const OtherUsers = ({ onSelectUser }) => {
         try {
           const userId=JSON.parse(sessionStorage.getItem('User'))
         const response = await axios.get(
-          `https://chat-app-be-78gg.onrender.com/users/${userId.user._id}`
+          `https://chat-app-be-main.onrender.com/users/${userId.user._id}`
         );
         setAllUsers(response.data.users);
       } catch (error) {
